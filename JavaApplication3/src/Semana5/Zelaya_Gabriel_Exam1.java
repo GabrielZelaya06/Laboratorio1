@@ -62,6 +62,7 @@ public class Zelaya_Gabriel_Exam1 {
             if(opcion==2){
                 
                 System.out.println("Opcion seleccionada: CLAVE");
+                
             }
             
             if(opcion==3){
@@ -141,7 +142,7 @@ public class Zelaya_Gabriel_Exam1 {
                 System.out.println("Tienes 10 intentos");
                 System.out.println("Empieza!");
                 int randomNum = random.nextInt(100) +1;
-                System.out.println(randomNum);
+
                 while(intentos!=0 && numIngresado!=randomNum){
                     
                     System.out.print("Ingresa un numero (1-100): ");
