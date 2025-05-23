@@ -62,7 +62,52 @@ public class Zelaya_Gabriel_Exam1 {
             if(opcion==2){
                 
                 System.out.println("Opcion seleccionada: CLAVE");
+                System.out.println("");
+                System.out.print("Ingresar un mensaje: ");
+                String mensaje = input.next();
+                String cifrado ="";
+                String descifrado ="";
                 
+                for(int index=0; index<mensaje.length(); index++){
+                    char letra = mensaje.charAt(index);
+                    
+                    if('a'<= letra && letra <= 'z'){
+                        
+                        cifrado+=(char)('z'-(letra-'a'));
+                        
+                    }else if('A'<= letra && letra <= 'Z'){
+                        
+                        cifrado+=(char)('Z'-(letra-'A'));
+                        
+                    }else{ 
+                        
+                        cifrado+=letra;
+                        
+                    }
+                }
+                
+                System.out.println("Cifrado:"+cifrado);
+                System.out.println("");
+                
+                for(int index=0; index<cifrado.length(); index++){
+                    char letra = cifrado.charAt(index);
+                    
+                    if('a'<= letra && letra <= 'z'){
+                        
+                        descifrado+=(char)('z'-(letra-'a'));
+                        
+                    }else if('A'<= letra && letra <= 'Z'){
+                        
+                        descifrado+=(char)('Z'-(letra-'A'));
+                        
+                    }else{ 
+                        
+                        descifrado+=letra;
+                        
+                    }
+                }
+                
+                System.out.println("Descifrado:"+descifrado);
             }
             
             if(opcion==3){
@@ -153,6 +198,7 @@ public class Zelaya_Gabriel_Exam1 {
                         System.out.println("El numero a adivinar es mayor");
                         intentos --;
                         System.out.println("Tienes "+intentos+" intentos restantes");
+                        System.out.println("");
                         intentosUsados ++;
                     }
                     
@@ -161,6 +207,7 @@ public class Zelaya_Gabriel_Exam1 {
                         System.out.println("El numero a adivinar es menor");
                         intentos --;
                         System.out.println("Tienes "+intentos+" intentos restantes");
+                        System.out.println("");
                         intentosUsados ++;
                     }
                     
