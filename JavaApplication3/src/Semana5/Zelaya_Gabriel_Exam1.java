@@ -66,13 +66,13 @@ public class Zelaya_Gabriel_Exam1 {
             
             if(opcion==3){
                 
-                int computerChoice = random.nextInt(3);
-                String choice = "";
                 String volverJugar ="";
                 System.out.println("Opcion seleccionada: PIEDRA, PAPEL, TIJERA");
                 System.out.println("");
                 
                 do{
+                    int computerChoice = random.nextInt(3) +1;
+                    String choice = "";
                     System.out.println("Bienvenido(a) a: PIEDRA, PAPEL, TIJERA");
                     System.out.println("");
                     System.out.print("Ingrese su elección: ");
@@ -88,15 +88,15 @@ public class Zelaya_Gabriel_Exam1 {
 
                     switch(computerChoice){
 
-                        case 0:
+                        case 1:
                             choice = "Piedra";
                         break;
 
-                        case 1:
+                        case 2:
                             choice = "Papel";
                         break;
 
-                        case 2:
+                        case 3:
                             choice = "Tijera";
                         break;
                     }
@@ -133,6 +133,7 @@ public class Zelaya_Gabriel_Exam1 {
             if(opcion==4){
                 
                 System.out.println("Opcion seleccionada: ADIVINAR");
+                
             }
             
             System.out.println("");
