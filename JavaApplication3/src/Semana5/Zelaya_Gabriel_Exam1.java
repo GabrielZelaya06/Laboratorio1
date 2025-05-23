@@ -132,8 +132,49 @@ public class Zelaya_Gabriel_Exam1 {
             
             if(opcion==4){
                 
+                int intentos = 10;
+                int intentosUsados =1;
+                int numIngresado=0;
                 System.out.println("Opcion seleccionada: ADIVINAR");
+                System.out.println("");
+                System.out.println("Esta opcion consiste en adivinar el numero del 1 al 100");
+                System.out.println("Tienes 10 intentos");
+                System.out.println("Empieza!");
+                int randomNum = random.nextInt(100) +1;
+                System.out.println(randomNum);
+                while(intentos!=0 && numIngresado!=randomNum){
+                    
+                    System.out.print("Ingresa un numero (1-100): ");
+                    numIngresado = input.nextInt();
+                    
+                    if(numIngresado<randomNum){
+                        System.out.println("");
+                        System.out.println("El numero a adivinar es mayor");
+                        intentos --;
+                        System.out.println("Tienes "+intentos+" intentos restantes");
+                        intentosUsados ++;
+                    }
+                    
+                    if(numIngresado>randomNum){
+                        System.out.println("");
+                        System.out.println("El numero a adivinar es menor");
+                        intentos --;
+                        System.out.println("Tienes "+intentos+" intentos restantes");
+                        intentosUsados ++;
+                    }
+                    
+                    if(numIngresado==randomNum){
+                        System.out.println("");
+                        System.out.println("ADIVINASTE!");
+                        System.out.println("Lograste adivinar en "+intentosUsados+" intentos");
+                    }
+                }
                 
+                if(intentos==0){
+                    System.out.println("");
+                    System.out.println("Llegaste al límite de intentos");
+                    System.out.println("El número a adivinar era: "+randomNum);
+                }
             }
             
             System.out.println("");
